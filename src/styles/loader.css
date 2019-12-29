@@ -1,0 +1,40 @@
+.loader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loader-wrapper .emoji {
+  display: inline-flex;
+  font-size: 5rem;
+}
+
+.loader-wrapper .emoji span {
+  opacity: 0;
+}
+
+.loader-wrapper .emoji span:nth-child(1) {
+  animation: appear 2s ease 0.5s both;
+}
+.loader-wrapper .emoji span:nth-child(2) {
+  animation: appear 2s ease 1s both;
+}
+.loader-wrapper .emoji span:nth-child(3) {
+  animation: appear 2s ease 1.5s both;
+}
+.loader-wrapper .emoji span:nth-child(4) {
+  animation: appear 2s ease 2s both;
+}
+.loader-wrapper .emoji span:nth-child(5) {
+  animation: appear 2s ease 2.5s both;
+}
+.loader-wrapper .emoji span:nth-child(5) {
+  animation: appear 2s ease 3s both;
+}
+.loader-wrapper .emoji span:nth-child(6) {
+  animation: appear 2s ease 3.5s both;
+}
+.loader-wrapper .emoji span:nth-child(7) {
+  animation: appear 2s ease 4s both;
+}

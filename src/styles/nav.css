@@ -1,0 +1,33 @@
+nav {
+  height: 6rem;
+  background: var(--color-pink-500);
+  padding: 1rem 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a {
+  color: var(--color-black);
+}
+
+nav h1 {
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+}
+
+nav ul a {
+  color: var(--color-black);
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+
+nav ul a.selected {
+  text-decoration: underline;
+  font-weight: 600;
+}

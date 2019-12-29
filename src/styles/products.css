@@ -10,7 +10,12 @@
   color: var(--color-black);
   border: 1px solid #eee;
   border-radius: 4px;
-  /* box-shadow: 2px 5px 6px 1px rgba(0, 0, 0, 0.08); */
+  transition: all 0.5s ease-in-out;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 2px 4px 15px 1px rgba(0, 0, 0, 0.08);
 }
 
 .product__body {
@@ -19,6 +24,7 @@
 
 .product__name {
   font-family: 'Playfair Display', serif;
+  font-weight: 700;
   font-size: 2.4rem;
 }
 
@@ -28,8 +34,11 @@
 }
 
 .product__img {
+  object-fit: cover;
+  height: 30rem;
+  width: 100%;
+  object-position: 50% 50%;
+  object-position: 0 0;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
-  width: 100%;
-  height: auto;
 }

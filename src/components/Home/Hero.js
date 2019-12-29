@@ -1,11 +1,15 @@
 import React from 'react';
-import CoffeeCup from '../../img/coffee.png';
 
 export default function Hero() {
   return (
     <header>
       <div className="container-fluid hero">
-        <img className="col-sm-6 col-md-5 col-lg-4 hero__image" src={CoffeeCup} alt="" />
+        <img
+          className="col-sm-6 col-md-5 col-lg-4 hero__image"
+          src="https://lhci-demo.s3.us-east-2.amazonaws.com/unoptimized/hero.png
+"
+          alt="hero"
+        />
         <div className="hero__body">
           <h1 className="hero__title">
             Great Coffee,
@@ -17,7 +21,6 @@ export default function Hero() {
             <br />
             best brew right at your doorstep.
           </p>
-          <button>see all</button>
         </div>
       </div>
       <svg className="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

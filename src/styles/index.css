@@ -1,8 +1,12 @@
-/* @import url("https://fonts.googleapis.com/css?family=Open+Sans:500|Caveat|Playfair+Display"); */
-/* @import "~bootstrap/dist/css/bootstrap.css"; */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Caveat:400,700|Playfair+Display:400,400i,700,700i,900,900i');
+@import '~bootstrap/dist/css/bootstrap.css';
 
+/* optimized fonts and CSS  */
+/*
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:500|Caveat:400,700|Playfair+Display:700&display=swap');
 @import '~bootstrap/dist/css/bootstrap-grid.min.css';
+*/
+
 @import './variables.css';
 @import './loader.css';
 @import './typography.css';
@@ -22,6 +26,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  font-display: block;
   background-color: var(--color-pink-100);
   color: var(--color-black);
   padding: 0;
@@ -42,6 +47,7 @@ a {
 }
 
 a:hover {
+  color: var(--color-black);
   text-decoration: underline;
 }
 
@@ -55,7 +61,7 @@ header {
 
 .hero {
   display: flex;
-  align-products: center;
+  align-items: center;
   justify-content: center;
   position: relative;
   color: var(--color-black);
@@ -86,19 +92,42 @@ header {
   padding-left: 1rem;
 }
 
-.shop-button {
-  border: 0;
+.sample-products-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.link-button {
+  margin: 4rem auto 1rem;
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
   outline: 0;
   text-decoration: none;
   cursor: pointer;
+  border: 1px solid var(--color-gray-94);
+  color: var(--color-black);
+  border-radius: 5rem;
+  padding: 1rem 5rem;
+  font-size: 1.6rem;
+  background: var(--color-white);
+  transition: all 0.5s ease-in-out;
+}
+
+.link-button:hover {
+  text-decoration: none;
+  color: var(--color-black);
+  transform: translateY(-5px);
+  box-shadow: 2px 4px 6px 1px rgba(0, 0, 0, 0.08);
 }
 
 .wave {
-  margin-top: -3rem;
+  margin-top: -5rem;
   z-index: -9;
   fill: var(--color-pink-300);
   animation: wave 25s ease infinite;
-  /* animation: top-entrance 5s cubic-bezier(0.215, 0.61, 0.355, 1) both; */
 }
 
 .content {
@@ -108,8 +137,10 @@ header {
 }
 
 .section__title {
+  margin: 4rem 0;
   position: relative;
   font-family: 'Playfair Display', serif;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -135,15 +166,12 @@ header {
   color: var(--color-yellow);
 }
 
-@media (max-width: 992px) {
-  /* .content {
-    margin-top: -15rem;
-  } */
-}
-
 /* ===============
   = responsive =
 =============== */
+
+@media (max-width: 992px) {
+}
 
 @media (max-width: 768px) {
   .hero__body {

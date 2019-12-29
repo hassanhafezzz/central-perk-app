@@ -7,8 +7,10 @@ nav {
   justify-content: space-between;
 }
 
-nav a {
+nav a,
+nav a:hover {
   color: var(--color-black);
+  text-decoration: none;
 }
 
 nav h1 {
@@ -28,6 +30,14 @@ nav ul a {
 }
 
 nav ul a.selected {
-  text-decoration: underline;
-  font-weight: 600;
+  position: relative;
+}
+
+nav ul a.selected:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  height: 1px;
+  background-color: var(--color-black);
 }

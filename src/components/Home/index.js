@@ -1,18 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Hero from './Hero';
+import Products from '../Products';
 
 const Home = props => {
   return (
     <>
       <Hero />
-      <div className="content container-md">
-        <section>
-          <h2 className="section__title">Refreshing Seasonal Coffee</h2>
-        </section>
+      <div className="content">
+        <div className="sample-products-wrapper container-md">
+          <Products limit={3} />
+          <Link to="/products" className="link-button">
+            View All
+          </Link>
+        </div>
       </div>
-      <section>
-        <h2 className="section__title">Know More</h2>
-      </section>
     </>
   );
 };

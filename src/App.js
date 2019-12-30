@@ -13,6 +13,8 @@ import Footer from './components/common/Footer';
 /* eslint-disable */
 import Swiper from 'react-id-swiper';
 import rd3 from 'react-d3-library';
+import axios from 'axios';
+import { Formik } from 'formik';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { OrderedMap } from 'immutable';

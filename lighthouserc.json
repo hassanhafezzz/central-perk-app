@@ -34,7 +34,8 @@
       "url": ["http://localhost:6174/", "http://localhost:6174/products"]
     },
     "upload": {
-      "target": "temporary-public-storage"
+      "target": "lhci",
+      "serverBaseUrl": "https://lhci-server-demo.herokuapp.com/app/projects"
     }
   }
 }

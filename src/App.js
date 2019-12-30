@@ -48,8 +48,12 @@ class App extends Component {
         <Router>
           <Nav />
           <Switch>
-            <Route path="/">{isLoading ? <Loader /> : <Home />}</Route>
-            <Route path="/products">{isLoading ? <Loader /> : <Products />}</Route>
+            <Route exact path="/">
+              {isLoading ? <Loader /> : <Home />}
+            </Route>
+            <Route exact path="/products">
+              {isLoading ? <Loader /> : <Products />}
+            </Route>
           </Switch>
           <Footer />
         </Router>

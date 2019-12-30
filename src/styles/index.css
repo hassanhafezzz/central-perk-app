@@ -19,10 +19,10 @@
 
 @import './variables.css';
 @import './loader.css';
-@import './typography.css';
 @import './nav.css';
 @import './products.css';
 @import './animation.css';
+@import './typography.css';
 
 :root {
   font-size: 10px;

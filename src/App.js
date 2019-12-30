@@ -16,13 +16,15 @@ import rd3 from 'react-d3-library';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { OrderedMap } from 'immutable';
+import { Calendar, momentLocalizer } from 'react-big-calendar';
+import moment from 'moment';
 /* eslint-enable */
 
 /* ----------
  -- For Better Performance --
   == use code splitting ==
 ----------  */
-import Loader from './components/common/Loader';
+// import Loader from './components/common/Loader';
 // const Home = lazy(() => import('./components/Home'));
 // const Products = lazy(() => import('./components/Products'));
 
@@ -30,29 +32,22 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      isLoading: true
-    };
+    this.state = {};
   }
 
-  componentDidMount() {
-    setTimeout(() => {
-      this.setState({ isLoading: false });
-    }, 5000);
-  }
+  componentDidMount() {}
 
   render() {
-    const { isLoading } = this.state;
     return (
-      <>
+      <div className="app">
         <Router>
           <Nav />
           <Switch>
             <Route exact path="/">
-              {isLoading ? <Loader /> : <Home />}
+              <Home />
             </Route>
             <Route exact path="/products">
-              {isLoading ? <Loader /> : <Products />}
+              <Products />
             </Route>
           </Switch>
           <Footer />
@@ -77,7 +72,7 @@ class App extends Component {
             </Suspense>
           </Router>
         */}
-      </>
+      </div>
     );
   }
 }

@@ -1,4 +1,3 @@
-@import-normalize;
 /* ----------
               -- For Better Performance --
   == use only needed font/weights with display swap ==
@@ -15,16 +14,18 @@
 */
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Caveat:400,700|Playfair+Display:400,400i,700,700i,900,900i');
+
 @import '~bootstrap/dist/css/bootstrap.css';
 
 @import './variables.css';
 @import './loader.css';
+@import './typography.css';
 @import './nav.css';
 @import './products.css';
 @import './animation.css';
-@import './typography.css';
 
 :root {
+  font-display: block;
   font-size: 10px;
 }
 
@@ -36,7 +37,6 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-display: block;
   background-color: var(--color-pink-100);
   color: var(--color-black);
   padding: 0;

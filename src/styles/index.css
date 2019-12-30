@@ -1,11 +1,21 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Caveat:400,700|Playfair+Display:400,400i,700,700i,900,900i');
-@import '~bootstrap/dist/css/bootstrap.css';
-
-/* optimized fonts and CSS  */
+@import-normalize;
+/* ----------
+              -- For Better Performance --
+  == use only needed font/weights with display swap ==
+----------  */
 /*
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:500|Caveat:400,700|Playfair+Display:700&display=swap');
+
+/* ----------
+              -- For Better Performance --
+  == only import needed CSS not the whole library ==
+----------  */
+/*
 @import '~bootstrap/dist/css/bootstrap-grid.min.css';
 */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Caveat:400,700|Playfair+Display:400,400i,700,700i,900,900i');
+@import '~bootstrap/dist/css/bootstrap.css';
 
 @import './variables.css';
 @import './loader.css';
@@ -65,7 +75,6 @@ header {
   justify-content: center;
   position: relative;
   color: var(--color-black);
-  /* border-top: 1rem solid #2d2d2d; */
   padding: 5rem 3rem 0;
   background: var(--color-pink-300);
 }

@@ -1,19 +1,28 @@
 {
-  "name": "coffee-house-app",
+  "name": "central-perk-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "@fortawesome/react-fontawesome": "^0.1.8",
     "bootstrap": "^4.4.1",
+    "immutable": "^4.0.0-rc.12",
     "moment": "^2.24.0",
     "react": "^16.12.0",
+    "react-d3-library": "^1.1.8",
     "react-dom": "^16.12.0",
+    "react-id-swiper": "^2.4.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "swiper": "^5.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "bundlesize": "bundlesize",
+    "analyze": "source-map-explorer 'build/static/js/*.js'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -30,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "bundlesize": "^0.18.0",
+    "source-map-explorer": "^2.1.2"
   }
 }

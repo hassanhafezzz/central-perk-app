@@ -6,6 +6,22 @@ import Products from './components/Products';
 import Nav from './components/common/Nav';
 import Footer from './components/common/Footer';
 
+/* ----------
+    -- For Better Performance --
+  == remove unnecessary packages ==
+----------  */
+/* eslint-disable */
+import Swiper from 'react-id-swiper';
+import rd3 from 'react-d3-library';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { OrderedMap } from 'immutable';
+/* eslint-enable */
+
+/* ----------
+ -- For Better Performance --
+  == use code splitting ==
+----------  */
 // import Loader from './components/common/Loader';
 // const Home = lazy(() => import('./components/Home'));
 // const Products = lazy(() => import('./components/Products'));
@@ -34,8 +50,11 @@ class App extends Component {
           </Switch>
           <Footer />
         </Router>
+        {/* ----------
+          -- For Better Performance --
+            == use code splitting ==
+          ---------- /* }
         {/*
-          using code splitting
           <Router>
             <Suspense fallback={<Loader />}>
               <Nav />

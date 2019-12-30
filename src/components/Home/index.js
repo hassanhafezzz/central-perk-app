@@ -9,7 +9,7 @@ const Home = props => {
       <Hero />
       <div className="content">
         <div className="sample-products-wrapper container-md">
-          <Products limit={3} />
+          <Products limit={6} />
           <Link to="/products" className="link-button">
             View All
           </Link>

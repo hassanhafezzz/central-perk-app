@@ -5,7 +5,7 @@
         "categories:performance": [
           "error",
           {
-            "minScore": 0.8
+            "minScore": 0.9
           }
         ],
         "categories:accessibility": [
@@ -29,12 +29,9 @@
       }
     },
     "collect": {
-      "numberOfRuns": 2,
+      "numberOfRuns": 3,
       "startServerCommand": "serve -s build -l 6174",
-      "url": ["http://localhost:6174/", "http://localhost:6174/gallery"]
-    },
-    "server": {
-      "port": "6174"
+      "url": ["http://localhost:6174/", "http://localhost:6174/products"]
     },
     "upload": {
       "target": "temporary-public-storage"

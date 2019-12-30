@@ -1,5 +1,10 @@
 import React from 'react';
 import moment from 'moment';
+/* ----------
+          -- For Better Performance --
+  == if you only need a simple functionality, ==
+    == no need to import a library for it ==
+----------  */
 
 export default function Footer() {
   return (

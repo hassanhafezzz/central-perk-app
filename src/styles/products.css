@@ -42,3 +42,25 @@
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
+
+/* ===============
+  = responsive =
+=============== */
+
+@media (max-width: 992px) {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 3.5rem;
+    grid-row-gap: 3.5rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .products {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-column-gap: 3.5rem;
+    grid-row-gap: 3.5rem;
+  }
+}

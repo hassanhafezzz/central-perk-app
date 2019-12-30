@@ -1,6 +1,6 @@
 import React from 'react';
 const loadingEmojiCount = 7;
-const loadingEmojis = ['🔥', '🦄', '👠', '🍔', '🍕', '☕️'];
+const loadingEmojis = ['🍨', '🦄', '🥧', '🍵', '🧃', '☕️'];
 
 export default function Loading() {
   const loadingEmoji = loadingEmojis[Math.floor(Math.random() * loadingEmojis.length)];

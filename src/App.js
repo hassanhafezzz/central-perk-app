@@ -22,7 +22,7 @@ import { OrderedMap } from 'immutable';
  -- For Better Performance --
   == use code splitting ==
 ----------  */
-// import Loader from './components/common/Loader';
+import Loader from './components/common/Loader';
 // const Home = lazy(() => import('./components/Home'));
 // const Products = lazy(() => import('./components/Products'));
 
@@ -30,23 +30,26 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      isLoading: true
+    };
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    setTimeout(() => {
+      this.setState({ isLoading: false });
+    }, 5000);
+  }
 
   render() {
+    const { isLoading } = this.state;
     return (
       <>
         <Router>
           <Nav />
           <Switch>
-            <Route path="/products">
-              <Products />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
+            <Route path="/">{isLoading ? <Loader /> : <Home />}</Route>
+            <Route path="/products">{isLoading ? <Loader /> : <Products />}</Route>
           </Switch>
           <Footer />
         </Router>

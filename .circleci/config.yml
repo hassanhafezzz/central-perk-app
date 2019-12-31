@@ -1,3 +1,4 @@
+# circle ci config.yml
 version: 2
 jobs:
   build:
@@ -13,15 +14,11 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run:
-          name: 'Setup custom environment variables'
-          command: |
-            echo '
-              export REACT_NODE_ENV="production"
-            ' >> $BASH_ENV
+      # install lhci command line interface
       - run: sudo npm install -g @lhci/cli@0.3.x
-      - run: sudo npm install -g serve
+      # install dependencies
       - run: npm install
+      # build  project
       - run: npm run build
 
       - save_cache:
@@ -30,6 +27,6 @@ jobs:
           key: v1-dependencies-{{ checksum "yarn.lock" }}
 
       # run tests!
-      - run: npm run bundlesize
-      - run: lhci autorun || echo "LHCI failed 😞!"
       - run: yarn test
+      # run lighthouse with default config
+      - run: lhci autorun || echo "LHCI failed 😞!"

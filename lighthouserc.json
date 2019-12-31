@@ -2,30 +2,10 @@
   "ci": {
     "assert": {
       "assertions": {
-        "categories:performance": [
-          "error",
-          {
-            "minScore": 0.9
-          }
-        ],
-        "categories:accessibility": [
-          "warn",
-          {
-            "minScore": 0.8
-          }
-        ],
-        "categories:seo": [
-          "warn",
-          {
-            "minScore": 0.8
-          }
-        ],
-        "categories:best-practices": [
-          "warn",
-          {
-            "minScore": 0.8
-          }
-        ]
+        "categories:performance": ["error", { "minScore": 0.9 }],
+        "categories:accessibility": ["warn", { "minScore": 0.8 }],
+        "categories:seo": ["warn", { "minScore": 0.8 }],
+        "categories:best-practices": ["warn", { "minScore": 0.8 }]
       }
     },
     "collect": {
@@ -34,8 +14,7 @@
       "url": ["http://localhost:6174/", "http://localhost:6174/products"]
     },
     "upload": {
-      "target": "lhci",
-      "serverBaseUrl": "https://lhci-server-demo.herokuapp.com/app/projects"
+      "target": "temporary-public-storage"
     }
   }
 }

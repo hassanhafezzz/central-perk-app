@@ -1,7 +1,7 @@
 import React from 'react';
 import Product from './Product';
-import productsData from '../../data/unoptimized-products';
-// import productsData from '../../data/optimized-products';
+// import productsData from '../../data/unoptimized-products';
+import productsData from '../../data/optimized-products';
 
 const Products = ({ limit }) => {
   const products = limit ? productsData.slice(0, limit) : productsData;
@@ -11,7 +11,9 @@ const Products = ({ limit }) => {
       <div className="products">
         {products.map((product, i) => (
           <Product
-            img={product.img}
+            img={product.src}
+            srcset={product.srcset}
+            sizes={product.sizes}
             key={`${product.title}-${i}`}
             title={product.title}
             description={product.description}

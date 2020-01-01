@@ -26,7 +26,7 @@ nav ul {
 nav ul a {
   color: var(--color-black);
   font-size: 1.4rem;
-  padding: 1rem;
+  padding: 0 1rem;
 }
 
 nav ul a.selected {
@@ -40,4 +40,10 @@ nav ul a.selected:before {
   width: 40%;
   height: 1px;
   background-color: var(--color-black);
+}
+
+@media (max-width: 576px) {
+  nav {
+    padding: 1rem 5rem;
+  }
 }

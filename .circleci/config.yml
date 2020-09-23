@@ -21,8 +21,8 @@ jobs:
             ' >> $BASH_ENV
       - run: sudo npm install -g @lhci/cli@0.3.x
       - run: sudo npm install -g serve
-      - run: npm install
-      - run: npm run build
+      - run: yarn
+      - run: yarn run build
 
       - save_cache:
           paths:
@@ -30,6 +30,6 @@ jobs:
           key: v1-dependencies-{{ checksum "yarn.lock" }}
 
       # run tests!
-      - run: npm run bundlesize
+      - run: yarn run bundlesize
       - run: lhci autorun || echo "LHCI failed 😞!"
       - run: yarn test

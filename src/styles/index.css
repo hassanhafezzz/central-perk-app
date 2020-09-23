@@ -73,6 +73,10 @@ header {
   width: 100%;
 }
 
+.hero__image img {
+  width: 100%;
+}
+
 .hero__title {
   display: block;
   color: var(--color-black);
